@@ -5,10 +5,17 @@ from . import __version__ as app_version
 app_name = "meeting"
 app_title = "Meeting"
 app_publisher = "Manale"
+<<<<<<< HEAD
 app_description = "App to manage meetings"
 app_icon = "octicon octicon-file-directory"
 app_color = "blue"
 app_email = "meeting@info.com"
+=======
+app_description = "meeting management app"
+app_icon = "octicon octicon-file-directory"
+app_color = "grey"
+app_email = "meetings@gmail.com"
+>>>>>>> 9fb53e762bb1c96f5a4dfb993f8b001ff7b87770
 app_license = "MIT"
 
 # Includes in <head>
