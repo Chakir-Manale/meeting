@@ -1,6 +1,6 @@
-## Meeting
+## Meeting Management
 
-meeting management app
+meeting management app based on frappe framework.
 
 #### License
 
