@@ -17,7 +17,10 @@
   "minutes_section",
   "minute",
   "attendees_section",
-  "attendees"
+  "attendees",
+  "invitation_section",
+  "invitation_message",
+  "send_invitations"
  ],
  "fields": [
   {
@@ -97,9 +100,25 @@
    "fieldtype": "Table",
    "label": "Attendees",
    "options": "Meeting Attendee"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "invitation_section",
+   "fieldtype": "Section Break",
+   "label": "Invitation Message"
+  },
+  {
+   "fieldname": "invitation_message",
+   "fieldtype": "Text Editor",
+   "label": "Invitation Message"
+  },
+  {
+   "fieldname": "send_invitations",
+   "fieldtype": "Button",
+   "label": "Send invitations"
   }
  ],
- "modified": "2020-11-26 15:56:59.883459",
+ "modified": "2020-11-27 12:53:31.247994",
  "modified_by": "Administrator",
  "module": "Meeting",
  "name": "Meeting",
