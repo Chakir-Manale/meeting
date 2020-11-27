@@ -5,3 +5,25 @@ frappe.ui.form.on('Meeting',  'validate',  function(frm) {
         validated = false;
     } 
 });
+
+frappe.ui.form.on("Meeting Attendee",{
+    attendee: function(frm,cdt,cdn){
+        var attendee = frappe.model.get_doc(cdt,cdn);
+        //if attendee selected, get full name
+        if(attendee.attendee){
+            frappe.call({
+                method: "meeting.meeting.doctype.meeting.meeting.get_full_name",
+                args: {
+                    attendee: attendee.attendee
+                },
+                callback: function(r){
+                    frappe.model.set_value(cdt,cdn,'full_name',r.message);
+                }
+            })
+        }
+        else{
+            //if no attendee selected, free full name
+            frappe.model.set_value(cdt,cdn,"full_name",null);
+        }
+    }
+})
