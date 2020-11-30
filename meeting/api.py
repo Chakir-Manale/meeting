@@ -21,3 +21,50 @@ def send_invitation_emails(meeting):
         frappe.msgprint(_("Invitations sent successfully!"))
     else:
         frappe.msgprint(_("Meeting Status != Planned "))
+
+@frappe.whitelist()
+def get_meetings(start,end):
+    if not frappe.has_permission('Meeting','read'):
+        raise frappe.PermissionError
+    
+       
+    
+    filters =  {
+                "start": start,
+                "end": end
+            }
+
+
+    frappe.msgprint(frappe.db.sql("""
+        select 
+            name,
+            timestamp('date',from_time) as start,
+            timestamp('date', to_time) as end,
+            title,status
+        from tabMeeting
+        where date between %(start)s and %(end)s """,{
+            "start": start,
+            "end": end
+        },
+       as_dict=0))
+
+    frappe.msgprint(
+        frappe.db.get_list('Meeting',
+        fields=['name',
+            'title','status'],
+        as_list=True
+     )
+    )
+
+    return frappe.db.sql("""
+        select 
+            name,
+            timestamp('date',from_time) as start,
+            timestamp('date', to_time) as end,
+            title,status
+        from tabMeeting
+        where date between %(start)s and %(end)s """,
+       {
+            "start": start,
+            "end": end
+        },as_dict=0)

@@ -5,7 +5,6 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "id",
   "title",
   "date",
   "column_break_5",
@@ -23,14 +22,6 @@
   "send_invitations"
  ],
  "fields": [
-  {
-   "fieldname": "id",
-   "fieldtype": "Read Only",
-   "hidden": 1,
-   "label": "ID",
-   "read_only": 1,
-   "unique": 1
-  },
   {
    "fieldname": "title",
    "fieldtype": "Data",
@@ -118,7 +109,7 @@
    "label": "Send invitations"
   }
  ],
- "modified": "2020-11-30 09:37:10.522856",
+ "modified": "2020-11-30 12:20:56.556931",
  "modified_by": "Administrator",
  "module": "Meeting",
  "name": "Meeting",
