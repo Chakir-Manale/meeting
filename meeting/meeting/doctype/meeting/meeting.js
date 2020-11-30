@@ -43,5 +43,9 @@ frappe.ui.form.on("Meeting",{
                 window.location.reload();
              }, 3000);
         }
+    },
+    //we can also use after_save: function(frm){frappe.ser_route("","")} 
+    on_submit: function(frm){
+        frappe.set_route("List","Meeting")
     }
 })
