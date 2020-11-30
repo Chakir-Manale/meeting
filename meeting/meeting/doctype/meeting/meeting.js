@@ -37,6 +37,11 @@ frappe.ui.form.on("Meeting",{
                     meeting: frm.doc.name
                 }
             });
+            
+            setTimeout(function(){
+                //location.reload();
+                window.location.reload();
+             }, 3000);
         }
     }
 })

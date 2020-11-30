@@ -18,5 +18,6 @@ def send_invitation_emails(meeting):
 
         meeting.status = "Invitations sent"
         meeting.save()
+        frappe.msgprint(_("Invitations sent successfully!"))
     else:
         frappe.msgprint(_("Meeting Status != Planned "))

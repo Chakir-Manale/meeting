@@ -102,7 +102,6 @@
    "options": "Meeting Attendee"
   },
   {
-   "collapsible": 1,
    "fieldname": "invitation_section",
    "fieldtype": "Section Break",
    "label": "Invitation Message"
@@ -113,13 +112,13 @@
    "label": "Invitation Message"
   },
   {
-   "depends_on": "eval:doc.status===\"Planned\"",
+   "depends_on": "eval:doc.status==\"Planned\"",
    "fieldname": "send_invitations",
    "fieldtype": "Button",
    "label": "Send invitations"
   }
  ],
- "modified": "2020-11-27 14:56:12.390879",
+ "modified": "2020-11-30 09:37:10.522856",
  "modified_by": "Administrator",
  "module": "Meeting",
  "name": "Meeting",

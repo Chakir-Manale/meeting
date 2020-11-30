@@ -6,9 +6,10 @@ def get_data():
 	return [
 		{
 			"module_name": "Meeting",
-			"color": "blue",
+			"color": "black",
 			"icon": "octicon octicon-file-directory",
 			"type": "module",
-			"label": _("Meeting")
+			"label": _("Meeting Management")
 		
-		}]
+		}
+	]
