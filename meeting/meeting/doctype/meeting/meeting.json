@@ -62,7 +62,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Planned\nIn Progress\nCompleted\nCancelled"
+   "options": "Planned\nIn Progress\nInvitations sent\nCompleted\nCancelled"
   },
   {
    "collapsible": 1,
@@ -113,12 +113,13 @@
    "label": "Invitation Message"
   },
   {
+   "depends_on": "eval:doc.status===\"Planned\"",
    "fieldname": "send_invitations",
    "fieldtype": "Button",
    "label": "Send invitations"
   }
  ],
- "modified": "2020-11-27 12:53:31.247994",
+ "modified": "2020-11-27 14:56:12.390879",
  "modified_by": "Administrator",
  "module": "Meeting",
  "name": "Meeting",
