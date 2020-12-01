@@ -34,6 +34,10 @@ def get_meetings(start,end):
                 "end": end
             }
 
+    """ 
+     Frappe.db.sql() && frappe.db.get_list() are the same,
+     but Its recomended to use the get_list() method,
+    """
 
     frappe.msgprint(frappe.db.sql("""
         select 
