@@ -7,13 +7,13 @@ import frappe
 from frappe.model.document import Document
 
 class Meeting(Document):
-	def validate(self):
-		""" set missing names """
+	pass
+	"""def validate(self):
+		 set missing names 
 		for attendee in self.attendees:
 			if not attendee.full_name:
-				attendee.full_name = get_full_name(attendee.attendee)
-				
-
+				attendee.full_name = get_full_name(attendee.attendee)		
+		"""
 	
 @frappe.whitelist()
 def get_full_name(attendee):
