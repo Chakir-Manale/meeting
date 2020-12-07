@@ -40,7 +40,7 @@ def dxfparsing():
     # test dxf parsing
     cwd = 'C:\\Users\\IPS\\Desktop\\win32com\\extractText'
     f = "DCE RSS 16-09-2020.dxf"
-    f = r'/home/manale/frappe-bench/apps/meeting/Plan du R+2.dxf'
+    f = r'/home/manale/frappe-bench/apps/meeting/PlanduR2.dxf'
     frappe.msgprint(f)
 
     dxf = dxfgrabber.readfile(f)
