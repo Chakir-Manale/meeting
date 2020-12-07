@@ -49,3 +49,14 @@ frappe.ui.form.on("Meeting",{
         frappe.set_route("List","Meeting")
     }
 })
+
+frappe.ui.form.on("Meeting", "refresh", function(frm) {
+    //Adding custom btn 
+    frm.add_custom_button(__("Test dxfgrabber"), function() {
+        console.log("Cool");
+        frappe.call({
+            method: "meeting.meeting.doctype.meeting.meeting.dxfparsing",
+            callback: function(r) { }
+        });
+    });
+});
