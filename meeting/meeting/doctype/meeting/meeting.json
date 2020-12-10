@@ -19,7 +19,8 @@
   "attendees",
   "invitation_section",
   "invitation_message",
-  "send_invitations"
+  "send_invitations",
+  "testfile"
  ],
  "fields": [
   {
@@ -107,9 +108,15 @@
    "fieldname": "send_invitations",
    "fieldtype": "Button",
    "label": "Send invitations"
+  },
+  {
+   "fieldname": "testfile",
+   "fieldtype": "Attach",
+   "label": "testFile",
+   "reqd": 1
   }
  ],
- "modified": "2020-11-30 12:20:56.556931",
+ "modified": "2020-12-09 15:59:10.566413",
  "modified_by": "Administrator",
  "module": "Meeting",
  "name": "Meeting",

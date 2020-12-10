@@ -51,6 +51,7 @@ def dxfparsing():
     entity_count = len(dxf.entities)  # list like collection of entities
     for entity in dxf.entities:
         print(entity.dxftype)
+        frappe.msgprint("forloop")
         if hasattr(entity, 'name'):
             frappe.msgprint(entity.name)
         else:
