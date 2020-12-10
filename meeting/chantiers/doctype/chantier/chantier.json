@@ -6,34 +6,57 @@
  "engine": "InnoDB",
  "field_order": [
   "intitule",
+  "collaborateur",
   "description",
   "date_ouverture",
-  "collaborateur"
+  "status",
+  "attribue"
  ],
  "fields": [
   {
    "fieldname": "description",
    "fieldtype": "Text Editor",
+   "in_list_view": 1,
    "label": "Description"
   },
   {
+   "default": "Today",
    "fieldname": "date_ouverture",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Date_ouverture"
   },
   {
    "fieldname": "intitule",
    "fieldtype": "Data",
-   "label": "Intitul\u00e9"
+   "in_list_view": 1,
+   "label": "Intitul\u00e9",
+   "reqd": 1
   },
   {
    "fieldname": "collaborateur",
-   "fieldtype": "Table",
+   "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Collaborateur",
    "options": "Collaborateur"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nClosed"
+  },
+  {
+   "default": "0",
+   "fieldname": "attribue",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Attribu\u00e9 ?"
   }
  ],
- "modified": "2020-12-10 10:08:15.709797",
+ "modified": "2020-12-10 11:59:46.540819",
  "modified_by": "Administrator",
  "module": "Chantiers",
  "name": "Chantier",

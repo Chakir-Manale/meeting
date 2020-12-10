@@ -16,13 +16,15 @@
    "fieldname": "nom",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Nom"
+   "label": "Nom",
+   "reqd": 1
   },
   {
    "fieldname": "prenom",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Prenom"
+   "label": "Prenom",
+   "reqd": 1
   },
   {
    "fieldname": "fonction",
@@ -33,7 +35,8 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Email"
+   "label": "Email",
+   "reqd": 1
   },
   {
    "fieldname": "tel",
@@ -42,7 +45,7 @@
    "label": "Tel"
   }
  ],
- "modified": "2020-12-10 10:38:09.637478",
+ "modified": "2020-12-10 11:58:10.778270",
  "modified_by": "Administrator",
  "module": "Chantiers",
  "name": "Collaborateur",
